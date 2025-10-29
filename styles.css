@@ -1,0 +1,256 @@
+body{
+    font-family: cursive;
+    line-height: 1.6;
+    color: #333;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.hero {
+    position: relative;
+    background: black;
+    color: white;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+}
+.hero .container {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+.MAG.Top {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    grid-column: 1;
+}
+.hero-content {
+    grid-column: 1;
+}
+
+.hero-text {
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+.location a {
+    display: inline-block;
+    background: white;
+    color: black;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+.location a:hover {
+    background: orange;
+    color: white;
+}
+.heropic {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+}
+.gallery-section {
+    padding: 80px 0;
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+    grid-template-areas: 
+        "text image1"
+        "image2 image1"
+        "image2 image3"
+        "inspired inspired";
+}
+
+h2 {
+    font-size: 50px;
+    text-align: left;
+    margin: 40px 0;
+    font-weight: bold;
+}
+
+.Address {
+    font-size: 20px;
+    text-align: left;
+    margin: 20px 0;
+    line-height: 1.8;
+}
+
+.hero-image {
+        position: relative;
+        width: 100%;
+        height: 300px;
+    }
+
+.grid-layout {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "text"
+            "image1"
+            "image2"
+            "image3"
+            "inspired";
+    }
+
+.Long.location {
+    font-size: 18px;
+    text-align: left;
+    margin: 20px 0;
+    line-height: 1.8;
+}
+footer{
+    background-color:  rgb(241, 109, 27);
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+}
+  footer .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+.MAG.Bottom {
+    font-size: 25px;
+    font-weight: bold;
+    flex: 1;
+}
+.footer1{
+    font-size: 16px;
+    margin-top: 5px;
+}
+.MAG Bottom, .footer1{
+    font-family: cursive;
+}
+.MAG Top{
+    font-size: 25px;
+    font-weight: bold;
+}
+.footer2{
+    font-size: 16px;
+    margin-top: 5px;
+}
+.MAG Top, .footer2{
+    font-family: cursive;
+}
+.Wander{
+    font-size: 18px;
+    text-align: center;
+    margin: 20px;
+}
+.and{
+    font-size: 18px;
+    text-align: center;
+    margin: 20px;
+}
+.Excited{
+    font-size: 18px;
+    text-align: center;
+    margin: 20px;
+}
+.Info{
+    font-size: 16px;
+    text-align: center;
+    margin: 10px;
+    flex: 2;
+    line-height: 1.6
+}
+
+.location a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+}
+.location a:hover{
+    color: orange;
+}
+img{
+    width: 40%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.inspired-section {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+.text-content {
+    grid-area: text;
+    padding: 40px;
+}
+.Wander {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.gallery-day {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+    grid-template-areas: 
+        "text image1"
+        "image2 image1"
+        "image2 image3"
+        "inspired inspired";
+}
+.grid1 {
+    grid-area: image1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.grid-image-1 {
+    grid-area: image1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.grid2 {
+    grid-area: image2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.grid3 {
+    grid-area: image3;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.and {
+    font-size: 36px;
+    font-weight: bold;
+    flex: 1;
+}
+.Excited {
+    font-size: 18px;
+    line-height: 1.8;
+    flex: 1;
+}
+
