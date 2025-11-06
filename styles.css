@@ -5,9 +5,7 @@
     --background: #FFFFFF;
 }
 
-/*---------
-    Reset
-  ---------*/
+
 
   *,
   * ::before,
@@ -19,17 +17,13 @@
       -webkit-font-smoothing: antialiased;
   }
 
-/*----------------
-    Global Styles
-  ----------------*/
+
 
 body {
   background-color: var(--background);
 }
 
-/*--------------
-    Typography
-  --------------*/
+
 
 h1,
 h2,
@@ -76,9 +70,7 @@ i {
     margin-right: 1.25rem;
 }
 
-/*----------
-    Layout
-  ----------*/
+
 
 .section-wrapper {
       margin-left: 1rem;
@@ -90,7 +82,7 @@ i {
     max-width: 100%;
 }
 
-/* hero section */
+
 .hero-container {
     margin: 2rem 1rem 7.5rem 1rem;
 }
@@ -99,7 +91,7 @@ i {
     margin-top: 2rem;
 }
 
-/* Section-1 */
+
 .grid-1 img{
     margin-bottom: 1.5625rem;
 }
@@ -112,7 +104,7 @@ i {
     margin-top: 1.3125rem;
 }
 
-/* 2nd Section */
+
 .grid-2 img,
 .grid-3 img {
     margin-bottom: 1rem;
@@ -132,7 +124,7 @@ footer {
     margin-top: 1.5rem;
 }
 
-/* Footer */
+
 footer {
     font-size: 1rem;
     line-height: 1.625rem;
@@ -144,27 +136,15 @@ footer p {
     margin-bottom: 2.375rem;
 }
 
-/*---------------
-    Link/Button
-  ---------------*/
-.arrow, 
-.link {
-    align-items: center;
-    display: flex;
-    height: 4.5rem;
-}
 
 .arrow {
+     align-items: center;
+    display: flex;
+    height: 4.5rem;
     background-color: var(--accent);
     justify-content: center;
     width: 3.5rem;
-}
-
-.link {
-    background-color: var(--heading);
-    justify-content: space-between;
-    margin-top: 2rem;
-    width: 16.25rem;
+    height: 100%;
 }
 
 .link a {
@@ -202,7 +182,7 @@ footer p {
     margin-top: 2rem;
     width: 16.25rem;
     height: 4.5rem;
-    text-decoration: none; /* remove underline */
+    text-decoration: none; 
 }
 
 .link span {
@@ -239,16 +219,6 @@ footer p {
 
 
 
-
-
-
-
-
-
-
-
-
-/* social links */
 footer a {
     color: var(--background);
 }
@@ -257,11 +227,9 @@ footer a:hover {
     color: var(--accent);
 }
 
-/*------------------
-    Tablet Screens
-  ------------------*/
+
 @media screen and (min-width: 768px) {
-   /* Typography Tablet*/ 
+   
    h1 {
        font-size: 4.375rem;
        line-height: 4.0625rem;
@@ -281,7 +249,7 @@ footer a:hover {
         margin-top: 1.5rem;
     }
 
-    /* Layout Tablet*/
+   
     .section-wrapper {
         margin-left: auto;
         margin-right: auto;
@@ -292,7 +260,7 @@ footer a:hover {
         display: flex;
     }
 
-    /* Header Tablet*/
+   
     header {
         display: flex;
         margin-bottom: 7.5rem;
@@ -305,7 +273,7 @@ footer a:hover {
         max-width: 21.1875rem;
     }
 
-    /* Section-1 Tablet*/
+    
     .section-1 {
         margin-bottom: .6875rem;
     }
@@ -322,7 +290,7 @@ footer a:hover {
         max-width: 13.9375rem;
     }
 
-    /* Section-2 Tablet */
+    
     .section-2 {
         margin-bottom: 7.5rem;
     }
@@ -349,7 +317,7 @@ footer a:hover {
         padding: 5.25rem 1.8125rem;
     }
     
-    /* Footer Tablet */
+  
     .footer-container {
         display: flex;
         justify-content: space-between;
@@ -366,13 +334,11 @@ footer a:hover {
     }
 }
 
-/*------------------
-    Larger Screens
-  ------------------*/
+
 
   @media screen and (min-width: 1200px){
 
-    /* Typography Large Screens */
+   
     h1 {
         font-size: 6rem;
         line-height: 5.5rem;
@@ -388,12 +354,12 @@ footer a:hover {
         line-height: 2rem;
     }
 
-    /* Layout Large Screens*/
+  
     .section-wrapper {
         max-width: 69.375rem;
     }
 
-    /* Header Large Screens*/
+   
     header {
         position: relative;
     }
@@ -424,7 +390,7 @@ footer a:hover {
         max-width: 350px;
     } 
  
-    /* Section-1 Large Screens */
+   
     .section-1,
     .grid-3 img {
         margin-bottom: 1.875rem;
@@ -435,7 +401,7 @@ footer a:hover {
         max-width: 21.875rem;
     }
 
-    /* Section-2 Large Screens */
+    
     .grid-2 img {
         margin-right: 1.875rem;
         width: 39.6875rem;
@@ -449,7 +415,7 @@ footer a:hover {
         padding: 4.0625rem 3rem;
     }
 
-    /* Footer Large Screens */
+ 
     footer p {
         font-size: 1.125rem;
         max-width: 26.875rem;
