@@ -1,298 +1,461 @@
-body{
-    font-family: cursive;
-    line-height: 1.6;
-    color: #333;
-}
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-.hero {
-    position: relative;
-    background: black;
-    color: white;
-    min-height: 600px;
-    display: flex;
-    align-items: center;
-}
-.hero .container {
-    position: relative;
-    z-index: 2;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
-}
-.footer .container {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-    }
-.MAG.Top {
-    font-size: 50px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    grid-column: 1;
-}
-.hero2{
-    grid-column: 1;
+:root {
+    --accent: #D5966C;
+    --heading: #141414;
+    --body-text: #444444;
+    --background: #FFFFFF;
 }
 
-.hero3 {
-    font-size: 18px;
-    margin-bottom: 30px;
-    line-height: 1.8;
-}
-.location a:hover {
-    color:white;
-    background: orange;
-    transition: all 0.3s ease;
-    
-}
-a[href="location.html"]{
-    display: inline-block;
-    background: white;
-    color: black;
-    padding: 15px 30px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 18px;
-    transition: all 0.3s ease;
-}
-.location a {
-    display: inline-block;
-    background: white;
-    color: black;
-    padding: 15px 30px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 18px;
-    transition: all 0.3s ease;
+/*---------
+    Reset
+  ---------*/
+
+  *,
+  * ::before,
+  * ::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+  }
+
+/*----------------
+    Global Styles
+  ----------------*/
+
+body {
+  background-color: var(--background);
 }
 
-.hero-pic {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 60%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.7;
-}
-.gallery-group {
-    padding: 80px 0;
+/*--------------
+    Typography
+  --------------*/
+
+h1,
+h2,
+h3 {
+    color: var(--heading);
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
 }
 
-.grid-layout {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-    gap: 20px;
-    grid-template-areas: 
-        "text image1"
-        "image2 image1"
-        "image2 image3"
-        "inspired inspired";
+h3,
+footer,
+footer p,
+.inspired-text h2, 
+.inspired-text p {
+    color: var(--background);
 }
 
 h1 {
-    font-size: 50px;
-    text-align: left;
-    margin: 40px 0;
-    font-weight: bold;
+    font-size: 3.75rem;
+    line-height: 3.4375rem;
 }
+
 h2 {
-    font-size: 36px;
-    text-align: left;
-    margin: 20px 0;
-    font-weight: bold;
+    font-size: 3.125rem;
+    line-height: 2.8125rem;
 }
 
-.Address {
-    font-size: 20px;
-    text-align: left;
-    margin: 20px 0;
-    line-height: 1.8;
+h2 span::before {
+    content:"\A";
+    white-space: pre;
 }
 
-.hero-image {
-        position: relative;
-        width: 100%;
-        height: 300px;
-    }
-.map {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 20px 0;
-}    
-a[href="index.html"] {
-    display: inline-block;
-    margin: 20px 0;
-    color: black;
+p {
+    color: var(--body-text);
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 300;
+    line-height: 1.75rem;
+}
+
+i {
+    font-size: 1.25rem;
+    margin-right: 1.25rem;
+}
+
+/*----------
+    Layout
+  ----------*/
+
+.section-wrapper {
+      margin-left: 1rem;
+      margin-right: 1rem;
+      max-width: 100%;
+}
+
+.section-wrapper img {
+    max-width: 100%;
+}
+
+/* hero section */
+.hero-container {
+    margin: 2rem 1rem 7.5rem 1rem;
+}
+
+.hero-text {
+    margin-top: 2rem;
+}
+
+/* Section-1 */
+.grid-1 img{
+    margin-bottom: 1.5625rem;
+}
+
+.section-1 {
+    margin-bottom: 2rem;
+}
+
+.section-1 .container p{
+    margin-top: 1.3125rem;
+}
+
+/* 2nd Section */
+.grid-2 img,
+.grid-3 img {
+    margin-bottom: 1rem;
+}
+
+.inspired-text,
+footer {
+    background-color: var(--heading);
+}
+
+.inspired-text {  
+    margin-bottom: 7.5rem;
+    padding: 3rem 1.5rem;
+}
+
+.inspired-text p {
+    margin-top: 1.5rem;
+}
+
+/* Footer */
+footer {
+    font-size: 1rem;
+    line-height: 1.625rem;
+    padding: 3rem 2rem;
+}
+
+footer p {
+    margin-top: 2.375rem;
+    margin-bottom: 2.375rem;
+}
+
+/*---------------
+    Link/Button
+  ---------------*/
+.arrow, 
+.link {
+    align-items: center;
+    display: flex;
+    height: 4.5rem;
+}
+
+.arrow {
+    background-color: var(--accent);
+    justify-content: center;
+    width: 3.5rem;
+}
+
+.link {
+    background-color: var(--heading);
+    justify-content: space-between;
+    margin-top: 2rem;
+    width: 16.25rem;
+}
+
+.link a {
+    color: var(--background);
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-size: 1.25rem;
+    letter-spacing: 3.64px;
+    line-height: 1.49625rem;
+    margin-left: 2rem;
     text-decoration: none;
-    font-weight: bold;
-    font-size: 18px;
+    text-transform: uppercase;
 }
- .grid-layout {
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-            "text"
-            "image1"
-            "image2"
-            "image3"
-            "inspired";
-    }
-a[href="index.html"]:hover {
-    color: orange;
-}
-.Long.location {
-    font-size: 18px;
-    text-align: left;
-    margin: 20px 0;
-    line-height: 1.8;
-}
-footer{
-    background-color:  rgb(241, 109, 27);
-    color: white;
-    text-align: center;
-    padding: 40px 0;
-}
-  footer .container {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-    }
 
-.MAG.Bottom {
-    font-size: 25px;
-    font-weight: bold;
-    flex: 1;
+.link:hover,
+.link:hover .arrow {
+    transition: all .3s ease-out;
 }
-footer .container {
+
+.link:hover {
+    background-color: var(--accent);
+}
+
+.link:hover .arrow {
+    background-color: var(--heading);
+}
+
+
+
+
+.link {
+    align-items: center;
+    background-color: var(--heading);
     display: flex;
     justify-content: space-between;
+    margin-top: 2rem;
+    width: 16.25rem;
+    height: 4.5rem;
+    text-decoration: none; /* remove underline */
+}
+
+.link span {
+    color: var(--background);
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-size: 1.25rem;
+    letter-spacing: 3.64px;
+    line-height: 1.49625rem;
+    margin-left: 2rem;
+    text-transform: uppercase;
+}
+
+.arrow {
+    background-color: var(--accent);
+    display: flex;
     align-items: center;
-}
-.footer{
-    font-size: 16px;
-    margin-top: 5px;
-}
-.MAG Bottom, .footer1{
-    font-family: cursive;
-}
-.MAG Top{
-    font-size: 25px;
-    font-weight: bold;
-}
-.footer2{
-    font-size: 16px;
-    margin-top: 5px;
-}
-.MAG Top, .footer2{
-    font-family: cursive;
-}
-.Wander-Collections{
-    font-size: 18px;
-    text-align: center;
-    margin: 20px;
-}
-.and{
-    font-size: 18px;
-    text-align: center;
-    margin: 20px;
-}
-.Excited{
-    font-size: 18px;
-    text-align: center;
-    margin: 20px;
-}
-.Info{
-    font-size: 16px;
-    text-align: center;
-    margin: 10px;
-    flex: 2;
-    line-height: 1.6
+    justify-content: center;
+    width: 3.5rem;
+    height: 100%;
 }
 
-.location a{
-    text-decoration: none;
-    color: black;
-    font-size: 18px;
-    font-weight: bold;
+.link:hover,
+.link:hover .arrow {
+    transition: all .3s ease-out;
 }
 
-img{
-    width: 40%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+.link:hover {
+    background-color: var(--accent);
 }
 
-.be-inspired {
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
+.link:hover .arrow {
+    background-color: var(--heading);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* social links */
+footer a {
+    color: var(--background);
+}
+
+footer a:hover {
+    color: var(--accent);
+}
+
+/*------------------
+    Tablet Screens
+  ------------------*/
+@media screen and (min-width: 768px) {
+   /* Typography Tablet*/ 
+   h1 {
+       font-size: 4.375rem;
+       line-height: 4.0625rem;
+   }
+
+   h2 {
+    font-size: 3.125rem;
+    line-height: 2.8125rem;
     }
 
-.Gallery-text1 {
-    grid-area: text;
-    padding: 40px;
-}
-.Wander {
-    font-size: 18px;
-    line-height: 1.8;
+   h2 span::before {
+        display: none;
+    }
+
+    .section-1 .container p, 
+    .inspired-text p {
+        margin-top: 1.5rem;
+    }
+
+    /* Layout Tablet*/
+    .section-wrapper {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 43.0625rem;
+    }
+
+    section {
+        display: flex;
+    }
+
+    /* Header Tablet*/
+    header {
+        display: flex;
+        margin-bottom: 7.5rem;
+    }
+
+    .hero-container {
+        margin-bottom: 0;
+        margin-left: -3.125rem;
+        margin-top: 9.0625rem;
+        max-width: 21.1875rem;
+    }
+
+    /* Section-1 Tablet*/
+    .section-1 {
+        margin-bottom: .6875rem;
+    }
+    .grid-1 img {
+        margin-bottom: 0;
+    }
+
+    .grid-1 {
+        order: 2;
+    }
+    
+    .container {
+        margin-right: 4.25rem;
+        max-width: 13.9375rem;
+    }
+
+    /* Section-2 Tablet */
+    .section-2 {
+        margin-bottom: 7.5rem;
+    }
+
+    .grid-2 img {
+        margin-right: .6875rem;
+        width: 24.875rem;
+    }
+
+    .grid-3 img{
+        margin-bottom: 5px;
+    }
+
+    .inspired-text, 
+    .grid-2 img{
+        margin-bottom: 0;
+    }
+
+    .inspired-container {
+        width: 17.5rem;
+    } 
+
+    .inspired-text {
+        padding: 5.25rem 1.8125rem;
+    }
+    
+    /* Footer Tablet */
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    footer p {
+        font-size: 1rem;
+        margin: 0;
+        max-width: 17.5625rem;
+    }
+    
+    footer {
+        padding: 3.5rem 2.4375rem;
+    }
 }
 
-.gallery-day {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-.grid-layout {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-    gap: 20px;
-    grid-template-areas: 
-        "text image1"
-        "image2 image1"
-        "image2 image3"
-        "inspired inspired";
-}
-.grid1 {
-    grid-area: image1;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+/*------------------
+    Larger Screens
+  ------------------*/
 
-.grid2 {
-    grid-area: image2;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.grid3 {
-    grid-area: image3;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.and {
-    font-size: 36px;
-    font-weight: bold;
-    flex: 1;
-}
-.Excited {
-    font-size: 18px;
-    line-height: 1.8;
-    flex: 1;
-}
+  @media screen and (min-width: 1200px){
 
+    /* Typography Large Screens */
+    h1 {
+        font-size: 6rem;
+        line-height: 5.5rem;
+    }
+
+    h2 {
+        font-size:3.75rem;
+        line-height: 3.75rem;
+    }
+
+    p {
+        font-size: 1.375rem;
+        line-height: 2rem;
+    }
+
+    /* Layout Large Screens*/
+    .section-wrapper {
+        max-width: 69.375rem;
+    }
+
+    /* Header Large Screens*/
+    header {
+        position: relative;
+    }
+    .hero-img {
+        padding-left: 28.125rem;
+        background-color: var(--heading);
+        height: 50rem;
+    }
+    
+    .hero-container {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 11.5%;
+        margin-top: 11.8125rem;
+        max-width: 69.375rem;
+        position: absolute; 
+    }
+
+    .hero-container h1 {
+        color: var(--background);
+        margin-right: 246px;
+        mix-blend-mode: difference;
+        width: 514px;
+    }
+
+    .hero-text {
+        margin-top: 0;
+        max-width: 350px;
+    } 
+ 
+    /* Section-1 Large Screens */
+    .section-1,
+    .grid-3 img {
+        margin-bottom: 1.875rem;
+    }
+
+    .container {
+        margin-right: 7.8125rem;
+        max-width: 21.875rem;
+    }
+
+    /* Section-2 Large Screens */
+    .grid-2 img {
+        margin-right: 1.875rem;
+        width: 39.6875rem;
+    }
+
+    .inspired-container {
+        width: 27.8125rem;
+    }
+
+    .inspired-text {
+        padding: 4.0625rem 3rem;
+    }
+
+    /* Footer Large Screens */
+    footer p {
+        font-size: 1.125rem;
+        max-width: 26.875rem;
+    }
+   
+    footer {
+        padding: 5rem 10.3125rem;
+    }
+  }
