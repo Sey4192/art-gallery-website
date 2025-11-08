@@ -5,11 +5,8 @@
     --background: #FFFFFF;
 }
 
-
-
 *,
-* ::before,
-* ::after {
+*::before,::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -17,29 +14,22 @@
     -webkit-font-smoothing: antialiased;
 }
 
-
-  body {
+body {
     background-color: var(--background);
     font-family: 'Outfit', sans-serif;
     font-weight: 300; 
-  }
+}
 
-
-footer p,
-h3,
-i {
+footer p,h3,i {
     color: var(--heading);
 } 
 
-h1, 
-h2,
-h3 {
+h1, h2,h3 {
     font-family: 'Big Shoulders Display', sans-serif;
     text-transform: uppercase;
 }
 
-h1,
-main p {
+h1,main p {
     color: var(--background);
 }
 
@@ -62,54 +52,31 @@ i {
     font-size: 1.25rem;
 }
 
-
 main {
     background-color: var(--heading);
     padding: 3rem 1rem 3.5rem 1rem;
 }
 
-.info {
-    margin-top: 3rem;
+
+.mapDiv {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
 }
 
-.info h2,
-.address {
-    margin-bottom: 20px;
+.map img {
+    width: 100%;
+    height: 34.375rem;
+    object-fit: cover;
+    display: block;
 }
-
-
-.info,
-.footer-wrapper {
-    max-width: 21.4375rem;
+.btn-wrapper {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 500;
 }
-
-footer {
-    background-color: var(--accent);
-    padding: 3rem 1rem;
-}
-
-.col-1,
-.col-2 {
-    margin-bottom: 2.375rem;
-}
-
-i:hover {
-    color: var(--background);
-}
-
-.fa-facebook-square,
-.fa-instagram {
-    margin-right: 1.25rem;
-}
-
-
-#map { 
-    height: 34.375rem; 
-}
-
-
-.arrow-l,
-.home-link a{
+.arrow-l,.home-link a {
     align-items: center;
     display: flex;
     height: 4.5rem;
@@ -137,8 +104,8 @@ button:hover .arrow-l {
 button:hover a {
     background-color: var(--accent);
 }
-button:hover .arrow-l,
-button:hover a {
+
+button:hover .arrow-l,button:hover a {
     transition: all .3s ease-out;
 }
 
@@ -155,107 +122,189 @@ button:hover a {
     position: absolute;
     z-index: 500;  
 }
+.info {
+    margin-top: 3rem;
+}
 
+.info h2,.address {
+    margin-bottom: 20px;
+}
 
+.info,.footer-wrapper {
+    max-width: 21.4375rem;
+}
 
+footer {
+    background-color: var(--accent);
+    padding: 3rem 1rem;
+}
 
+.col-1,.col-2 {
+    margin-bottom: 2.375rem;
+}
 
-  @media screen and (min-width: 768px) {
-     
-      h1 {
-          font-size: 3.4375rem;
-          line-height: 3.125rem;
-      }
-      
-      main p {
+i:hover {
+    color: var(--background);
+}
+
+.fa-facebook-square,.fa-instagram {
+    margin-right: 1.25rem;
+}
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: 3.4375rem;
+        line-height: 3.125rem;
+    }
+    
+    main p {
         font-size: 1.125rem;
         line-height: 1.75rem;
-      }
+    }
 
-      footer p {
-          font-size: 1rem;
-          line-height: 1.625rem;
-      }
+    footer p {
+        font-size: 1rem;
+        line-height: 1.625rem;
+    }
 
-     
-      main {
-          display: grid;
-          grid-template-columns: 1fr 398px;
-          justify-content: space-between;
-          padding: 5.5rem 2.4375rem 5rem 2.4375rem;
-      }
+    main {
+        display: grid;
+        grid-template-columns: 1fr 398px;
+        justify-content: space-between;
+        padding: 5.5rem 2.4375rem 5rem 2.4375rem;
+    }
 
-      h1 span::before {
+    h1 span::before {
         content:"\A";
         white-space: pre;
     }
 
-      .info {
-          margin-top: 0;
-          max-width: 398px;
-      }
+    .info {
+        margin-top: 0;
+        max-width: 398px;
+    }
 
-      
-      .home-link {
+    .home-link {
         left: 2.4375rem;
     }
 
-    
-      footer {
+    footer {
         padding: 3.5rem 2.4375rem;
-      }
-      .footer-wrapper {
-          display: flex;
-          justify-content: space-between;
-          max-width: 689px;
-      }
+    }
+    
+    .footer-wrapper {
+        display: flex;
+        justify-content: space-between;
+        max-width: 689px;
+    }
 
-      .col-2 {
-          width: 17.5625rem;
-      }
-  }
+    .col-2 {
+        width: 17.5625rem;
+    }
+}
 
-  @media screen and (min-width: 1000px) {
-      
-      h1 {
+@media screen and (min-width: 1000px) {
+    h1 {
         font-size: 4.375rem;
         line-height: 4.375rem;
-      }
+    }
 
-      h2 {
+    h2 {
         font-size: 2.25rem;
         line-height: 2.25rem;
-      }
+    }
 
-      main p {
+    main p {
         font-size: 1.375rem;
-      }
+    }
 
-      footer p {
+    footer p {
         font-size: 1.125rem;
         line-height: 1.75rem;
-      }
+    }
 
-      
-      main {
+    main {
         padding: 6.5rem 10.312rem 8rem 10.312rem;
-      }
+    }
 
-      footer {
+    footer {
         padding: 5rem 10.312rem;
         justify-content: center;
-      }
+    }
 
-      .footer-wrapper {
-          max-width: 69.375rem;
-      }
+    .footer-wrapper {
+        max-width: 69.375rem;
+    }
 
-      .col-2 {
+    .col-2 {
         width: 26.875rem;
-      }
+    }
 
-       
-       .home-link {
+    .home-link {
         left: 9.75rem;
     }
+}
+.map-section {
+  position: relative;
+  width: 100%;
+  height: 100vh; 
+  overflow: hidden;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  height: 34.375rem; 
+}
+.home-link {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  border: none;
+  display: flex;
+  z-index: 500;
+}
+
+.arrow-l,.home-link a {
+  align-items: center;
+  display: flex;
+  height: 4.5rem;
+  justify-content: center;
+}
+
+.home-link a {
+  align-items: center;
+  background-color: var(--heading);
+  color: var(--background);
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 3.64px;
+  line-height: 1.49625rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 208px;
+}
+
+.arrow-l {
+  background-color: var(--accent);
+  width: 56px;
+}
+
+button:hover .arrow-l {
+  background-color: var(--heading);
+}
+
+button:hover a {
+  background-color: var(--accent);
+}
+
+button:hover .arrow-l,button:hover a {
+  transition: all 0.3s ease-out;
+}
+@media (max-width: 768px) {
+  .map-section {
+    height: 70vh;
   }
+}
+
